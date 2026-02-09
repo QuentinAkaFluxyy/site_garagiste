@@ -52,3 +52,60 @@ updateProgress();
 // Année footer
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Statut "Ouvert/Fermé" (Europe/Paris)
+function getParisTimeParts() {
+  const fmt = new Intl.DateTimeFormat("fr-FR", {
+    timeZone: "Europe/Paris",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
+
+  const parts = fmt.formatToParts(new Date());
+  const obj = {};
+  for (const p of parts) obj[p.type] = p.value;
+  return obj; // { weekday, hour, minute, ... }
+}
+
+function isOpenNowParis() {
+  const { weekday, hour, minute } = getParisTimeParts();
+  const h = parseInt(hour, 10);
+  const m = parseInt(minute, 10);
+  const t = h * 60 + m;
+
+  // Lun–Ven uniquement
+  // weekday en fr-FR: "lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."
+  const wd = (weekday || "").toLowerCase();
+  const isWeekday = ["lun.", "mar.", "mer.", "jeu.", "ven."].includes(wd);
+  if (!isWeekday) return false;
+
+  // Plages horaires (minutes)
+  const morningOpen = 9 * 60;
+  const morningClose = 12 * 60 + 30;
+  const afternoonOpen = 14 * 60 + 30;
+  const afternoonClose = 18 * 60 + 30;
+
+  const inMorning = t >= morningOpen && t < morningClose;
+  const inAfternoon = t >= afternoonOpen && t < afternoonClose;
+
+  return inMorning || inAfternoon;
+}
+
+function updateOpenStatusDot() {
+  const dot = document.querySelector(".brand__mark");
+  if (!dot) return;
+
+  const open = isOpenNowParis();
+  dot.classList.toggle("is-open", open);
+  dot.classList.toggle("is-closed", !open);
+
+  // Accessibilité : indique l’état au survol
+  dot.setAttribute("title", open ? "Ouvert" : "Fermé");
+  dot.setAttribute("aria-label", open ? "Ouvert" : "Fermé");
+}
+
+// initial + refresh toutes les 30s
+updateOpenStatusDot();
+setInterval(updateOpenStatusDot, 30000);
