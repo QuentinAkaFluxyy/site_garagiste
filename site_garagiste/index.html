@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="E&G Garage à Saint-Laurent-du-Var : entretien & réparation automobile – toutes marques. Téléphone, horaires, avis clients, accès." />
+  <title>E&G Garage — Saint-Laurent-du-Var</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Typo sobre + premium -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top progress (stylé + utile) -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">E&amp;G <strong>Garage</strong></span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleIcon" aria-hidden="true"></span>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#services">Services</a>
+          <a class="nav__link" href="#avis">Avis</a>
+          <a class="nav__link" href="#infos">Infos</a>
+          <a class="nav__link" href="#acces">Accès</a>
+          <a class="nav__link" href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="#contact">Coordonnées</a>
+        <a class="btn btn--primary" href="tel:+33493568164" aria-label="Appeler E&G Garage">Appeler</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="reveal">
+          <p class="kicker">Saint-Laurent-du-Var · Toutes marques</p>
+          <h1>E&amp;G Garage</h1>
+          <p class="subtitle">Entretien &amp; réparation automobile — sérieux, pro, rassurant.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="tel:+33493568164">📞 Appeler</a>
+            <a class="btn btn--ghost" target="_blank" rel="noopener"
+              href="https://www.google.com/maps/search/?api=1&query=11%20All%C3%A9e%20des%20Imprimeurs%2C%2006700%20Saint-Laurent-du-Var">
+              📍 Itinéraire
+            </a>
+          </div>
+
+          <div class="hero__badges">
+            <span class="badge">Travail soigné</span>
+            <span class="badge">Conseils clairs</span>
+            <span class="badge badge--accent">Toutes marques</span>
+          </div>
+        </div>
+
+        <div class="hero__card reveal" style="--delay: 0.08s">
+          <div class="hero__cardTop">
+            <h2>Infos rapides</h2>
+            <div class="pill">Ouvert Lun → Ven</div>
+          </div>
+
+          <ul class="quick">
+            <li>
+              <span class="quick__label">Horaires</span>
+              <span class="quick__value">09:00–12:30 · 14:30–18:30</span>
+            </li>
+            <li>
+              <span class="quick__label">Téléphone</span>
+              <a class="quick__value link" href="tel:+33493568164">04 93 56 81 64</a>
+            </li>
+            <li>
+              <span class="quick__label">Adresse</span>
+              <span class="quick__value">11 Allée des Imprimeurs, 06700 Saint-Laurent-du-Var</span>
+            </li>
+          </ul>
+
+          <div class="hero__cardActions">
+            <a class="btn btn--primary btn--full" href="#contact">Voir toutes les infos</a>
+            <a class="btn btn--ghost btn--full" href="#avis">Lire les avis</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__fade" aria-hidden="true"></div>
+    </section>
+
+    <!-- A propos -->
+    <section class="section" id="apropos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Un garage local, une approche claire</h2>
+          <p>
+            Chez E&amp;G Garage, priorité à la qualité : interventions soignées, explications simples,
+            et un service qui inspire confiance — sans prise de tête.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="featureCard reveal" style="--delay: 0.05s">
+            <div class="featureCard__icon" aria-hidden="true">✅</div>
+            <h3>Sérieux &amp; transparence</h3>
+            <p>On vous explique clairement ce qui est fait et pourquoi.</p>
+          </article>
+
+          <article class="featureCard reveal" style="--delay: 0.10s">
+            <div class="featureCard__icon" aria-hidden="true">🧰</div>
+            <h3>Travail soigné</h3>
+            <p>Entretien et mécanique réalisés avec rigueur, pour repartir serein.</p>
+          </article>
+
+          <article class="featureCard reveal" style="--delay: 0.15s">
+            <div class="featureCard__icon" aria-hidden="true">🚗</div>
+            <h3>Toutes marques</h3>
+            <p>Interventions sur de nombreux modèles, du quotidien au spécifique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Services</h2>
+          <p>Les prestations les plus demandées — et on s’adapte à vos besoins.</p>
+        </div>
+
+        <div class="cards">
+          <article class="serviceCard reveal">
+            <h3>Entretien</h3>
+            <p>Vidange, filtres, révision, niveaux…</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.03s">
+            <h3>Freinage</h3>
+            <p>Plaquettes, disques, contrôle et remplacement.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.06s">
+            <h3>Pneus</h3>
+            <p>Montage, équilibrage, conseil et remplacement.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.09s">
+            <h3>Distribution</h3>
+            <p>Remplacement et contrôle selon préconisations constructeur.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.12s">
+            <h3>Embrayage</h3>
+            <p>Contrôle, remplacement, sensations et performance.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.15s">
+            <h3>Batterie / Démarrage</h3>
+            <p>Test batterie, alternateur, démarrage difficile.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.18s">
+            <h3>Climatisation</h3>
+            <p>Recharge, contrôle, entretien.</p>
+          </article>
+
+          <article class="serviceCard reveal" style="--delay:0.21s">
+            <h3>Pré-contrôle technique</h3>
+            <p>Vérifications clés avant CT (sécurité et conformité).</p>
+          </article>
+        </div>
+
+        <div class="commitment reveal" style="--delay:0.08s">
+          <div class="commitment__item">
+            <span class="commitment__num">01</span>
+            <span class="commitment__txt">Toutes marques</span>
+          </div>
+          <div class="commitment__item">
+            <span class="commitment__num">02</span>
+            <span class="commitment__txt">Travail soigné</span>
+          </div>
+          <div class="commitment__item">
+            <span class="commitment__num">03</span>
+            <span class="commitment__txt">Conseils clairs</span>
+          </div>
+          <div class="commitment__item">
+            <span class="commitment__num">04</span>
+            <span class="commitment__txt">Service rapide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis -->
+    <section class="section" id="avis">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Avis clients</h2>
+          <p>Les retours comptent. Retrouvez tous les avis sur Google.</p>
+        </div>
+
+        <div class="reviews">
+          <!-- Tu peux remplacer ces textes par de vrais extraits -->
+          <article class="reviewCard reveal">
+            <div class="reviewCard__top">
+              <div class="reviewCard__name">Client Google</div>
+              <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            </div>
+            <p>Accueil pro, explications claires et travail soigné. Je recommande.</p>
+          </article>
+
+          <article class="reviewCard reveal" style="--delay:0.05s">
+            <div class="reviewCard__top">
+              <div class="reviewCard__name">Client Google</div>
+              <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            </div>
+            <p>Intervention rapide, bon contact, et véhicule récupéré nickel.</p>
+          </article>
+
+          <article class="reviewCard reveal" style="--delay:0.10s">
+            <div class="reviewCard__top">
+              <div class="reviewCard__name">Client Google</div>
+              <div class="stars" aria-label="5 étoiles">★★★★★</div>
+            </div>
+            <p>Très sérieux. On sent qu’ils maîtrisent et qu’ils prennent le temps.</p>
+          </article>
+        </div>
+
+        <div class="center reveal" style="--delay:0.06s">
+          <a class="btn btn--primary" target="_blank" rel="noopener"
+             href="https://www.google.com/search?q=avis+sur+e%26g+garage">
+            Voir tous les avis Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="section section--alt" id="infos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Infos pratiques</h2>
+          <p>Tout ce qu’il faut en un coup d’œil.</p>
+        </div>
+
+        <div class="infoGrid">
+          <article class="infoCard reveal">
+            <h3>Horaires</h3>
+            <ul class="list">
+              <li><strong>Lundi → Vendredi</strong> : 09:00–12:30 · 14:30–18:30</li>
+              <li>Week-end : fermé</li>
+            </ul>
+          </article>
+
+          <article class="infoCard reveal" style="--delay:0.06s">
+            <h3>Coordonnées</h3>
+            <ul class="list">
+              <li>📞 <a class="link" href="tel:+33493568164">04 93 56 81 64</a></li>
+              <li>📍 11 Allée des Imprimeurs, 06700 Saint-Laurent-du-Var</li>
+            </ul>
+
+            <div class="infoCard__actions">
+              <a class="btn btn--primary btn--full" href="tel:+33493568164">Appeler</a>
+              <a class="btn btn--ghost btn--full" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/search/?api=1&query=11%20All%C3%A9e%20des%20Imprimeurs%2C%2006700%20Saint-Laurent-du-Var">
+                Itinéraire
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accès / Carte -->
+    <section class="section" id="acces">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Accès</h2>
+          <p>Retrouvez E&amp;G Garage facilement.</p>
+        </div>
+
+        <div class="mapWrap reveal">
+          <iframe
+            title="Carte Google Maps - E&G Garage"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=11%20All%C3%A9e%20des%20Imprimeurs%2C%2006700%20Saint-Laurent-du-Var&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="contactCard reveal">
+          <div class="contactCard__left">
+            <h2>Contact</h2>
+            <p class="muted">
+              Besoin d’un renseignement ? Le plus simple : un appel.
+              (Site vitrine — pas de demande de devis en ligne.)
+            </p>
+
+            <div class="contactRows">
+              <div class="contactRow">
+                <span class="contactRow__label">Téléphone</span>
+                <a class="contactRow__value link" href="tel:+33493568164">04 93 56 81 64</a>
+              </div>
+              <div class="contactRow">
+                <span class="contactRow__label">Adresse</span>
+                <span class="contactRow__value">11 Allée des Imprimeurs, 06700 Saint-Laurent-du-Var</span>
+              </div>
+              <div class="contactRow">
+                <span class="contactRow__label">Horaires</span>
+                <span class="contactRow__value">Lun → Ven : 09:00–12:30 · 14:30–18:30</span>
+              </div>
+            </div>
+
+            <div class="contactActions">
+              <a class="btn btn--primary" href="tel:+33493568164">📞 Appeler maintenant</a>
+              <a class="btn btn--ghost" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/search/?api=1&query=11%20All%C3%A9e%20des%20Imprimeurs%2C%2006700%20Saint-Laurent-du-Var">
+                📍 Ouvrir dans Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="contactCard__right">
+            <div class="miniMap">
+              <iframe
+                title="Mini carte - E&G Garage"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=11%20All%C3%A9e%20des%20Imprimeurs%2C%2006700%20Saint-Laurent-du-Var&output=embed">
+              </iframe>
+            </div>
+            <div class="legalNote">
+              <p><strong>Mentions légales</strong> : à compléter (éditeur, hébergeur, SIRET, etc.).</p>
+              <p class="muted">© <span id="year"></span> E&amp;G Garage — Tous droits réservés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">E&amp;G Garage</div>
+        <div class="footer__muted">11 Allée des Imprimeurs · 06700 Saint-Laurent-du-Var</div>
+      </div>
+      <div class="footer__right">
+        <a class="link" href="tel:+33493568164">04 93 56 81 64</a>
+        <a class="link" href="#top">Retour en haut ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
